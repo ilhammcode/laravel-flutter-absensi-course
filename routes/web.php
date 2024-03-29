@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BackendTemplateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//backend
+Route::get('/backend_template', [BackendTemplateController::class, 'index'])->name('backend_template');
